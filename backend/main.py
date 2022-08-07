@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/getdata_sqm/": {"origins": "*"}})
 CORS(app, resources={r"/getdata_nqm/": {"origins": "*"}})
 CORS(app, resources={r"/passnqm/": {"origins": "*"}})
-CORS(app, resources={r"/passnqm/": {"origins": "*"}})
+CORS(app, resources={r"/passsqm/": {"origins": "*"}})
 
 
 # keyring.set_password('python', 'StreamAlpha', 'Password')
