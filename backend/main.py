@@ -32,7 +32,7 @@ def getdatanqm():
     content = request.get_json()
     # print(content)
     getdata_nqm(content)
-    return "done"
+    return 'hii'
 
 
 @app.route('/passnqm', methods=['POST'])
