@@ -4,8 +4,9 @@ Analytics tool to provide detail reports on the grading difference between NQM a
 
 ## Technology stack
 
--   Programming language : Python, JAVA Script
+-   Programming language : Python, JAVA Script, Type Script
 -   Data storage and querying : Mongo DB
 -   Structure & styling Language : HTML & CSS
 -   Backend Framework : Flask
--   Frontend Framework : ReactJS
+-   Frontend Library : ReactJS
+-   Frontend Framework : NextJS
