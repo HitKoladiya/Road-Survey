@@ -28,21 +28,21 @@ const BarChart = () => {
                             label: "NQM Survey",
                             data: [
                                 100, 100, 100, 100, 50, 100, 100, 100, 50, 100,
-                                100, 50, 100,
+                                100, 50
                             ],
-                            backgroundColor: "rgba(255,99,132,0.2)",
-                            borderColor: "rgba(255, 99, 132, 1)",
-                            borderWidth: 1,
+                            backgroundColor: "#d9304ca",
+                            borderColor: "black",
+                            borderWidth: 2,
                         },
                         {
                             label: "SQM Survey",
                             data: [
                                 100, 100, 50, 100, 100, 100, 100, 50, 100, 50,
-                                100, 100, 100,
+                                100, 100
                             ],
-                            backgroundColor: "rgba(75, 192, 192, 0.2)",
-                            borderColor: "rgba(75, 192, 192, 1)",
-                            borderWidth: 1,
+                            backgroundColor: "#80e0df",
+                            borderColor: "black",
+                            borderWidth: 2,
                         },
                     ],
                 }}
@@ -51,9 +51,9 @@ const BarChart = () => {
                 options={{
                     title: {
                         display: true,
-                        text: "ANALYSIS OF NQM AND NQM SURVEY",
+                        text: "ANALYTICAL REPORT OF NQM AND SQM NORMS",
                         fontSize: 35,
-                        fontFamily: "sans-serif",
+                        fontFamily: "Times New Roman",
                     },
                     maintainAspectRatio: false,
                     scales: {
@@ -68,6 +68,7 @@ const BarChart = () => {
                     legend: {
                         labels: {
                             fontSize: 20,
+                            fontfamily:'Times New Roman',
                         },
                     },
                 }}
