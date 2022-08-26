@@ -1,10 +1,10 @@
 import pymongo
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = pymongo.MongoClient("mongodb+srv://Hit:hi@cluster0.vpx7qvp.mongodb.net/test")
 db = client['myproject2']
 collection_sqm = db['sqm']
 
 
-def getdata_sqm(data):
+def putdata_sqm(data):
     collection_sqm.insert_one(data)
 
 #
@@ -16,5 +16,5 @@ def pass_sqm(data):
         return data
 
 
-d={"name":"hit"}
+# d={"name":"hit"}
 # getdata_sqm(d)
