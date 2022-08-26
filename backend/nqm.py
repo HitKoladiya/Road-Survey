@@ -4,7 +4,7 @@ db = client['myproject2']
 collection_nqm = db['nqm']
 
 
-def getdata_nqm(data):
+def putdata_nqm(data):
     collection_nqm.insert_one(data)
 
 
