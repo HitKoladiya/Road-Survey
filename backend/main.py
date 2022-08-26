@@ -24,7 +24,7 @@ def getdatasqm():
     content = request.get_json()
     # print(content)
     putdata_sqm(content)
-    return "hii"
+    return content
 
 
 @app.route('/putdata_nqm', methods=['POST'])
@@ -32,7 +32,7 @@ def getdatanqm():
     content = request.get_json()
     # print(content)
     putdata_nqm(content)
-    return 'hii'
+    return content
 
 
 @app.route('/passnqm', methods=['POST'])
