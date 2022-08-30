@@ -79,9 +79,24 @@ const Form = () => {
 
     const handelSubmit = (e: any) => {
         e.preventDefault();
-        const data = { decision, resion };
-        console.log(data);
-        alert(JSON.stringify(data));
+
+        let validetor = true;
+
+        decision.forEach((element) => {
+            element === "none" ? (validetor = false) : (validetor = true);
+        });
+
+        resion.forEach((element) => {
+            element === "" ? (validetor = false) : (validetor = true);
+        });
+
+        if (validetor) {
+            const data = { decision, resion };
+            console.log(data);
+            alert(JSON.stringify(data));
+        } else {
+            alert("Please fill all fields");
+        }
     };
 
     return (
