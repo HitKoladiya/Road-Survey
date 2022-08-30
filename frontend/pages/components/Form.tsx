@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CSS from "csstype";
 
 const Form = () => {
     const nomes = [
@@ -81,17 +82,16 @@ const Form = () => {
         const data = { decision, resion };
         console.log(data);
         alert(JSON.stringify(data));
-        
     };
 
     return (
-        <div className="w-2xl flex justify-center py-10 px-28">
+        <div className="w-2xl flex justify-center sm:py-10 sm:px-28 p-10">
             <form onSubmit={handelSubmit}>
                 {/* ----- */}
                 {nomes.map((nome, index) => (
                     <div key={index}>
                         <div
-                            className="grid py-3 grid-cols-5 gap-5 justify-center"
+                            className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
                             key={index}
                         >
                             <div className="flex items-center h-10 col-span-2">
