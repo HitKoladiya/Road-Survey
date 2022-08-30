@@ -55,7 +55,7 @@ const Form = () => {
 
     const handleDecision = (e: { target: { name: string; value: string } }) => {
         const i = Number(e.target.name.slice(0, 2)) - 10;
-        console.log(i);
+        // console.log(i);
 
         name = e.target.name;
         value = e.target.value;
@@ -67,7 +67,7 @@ const Form = () => {
 
     const handleResion = (e: { target: { name: string; value: string } }) => {
         const i = Number(e.target.name.slice(0, 2)) - 10;
-        console.log(i);
+        // console.log(i);
 
         name = e.target.name;
         value = e.target.value;
