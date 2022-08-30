@@ -1,30 +1,62 @@
-{
-    "decision": [
-        "Reimprovement",
-        "Satisfactory",
-        "Unsatisfactory",
-        "Reimprovement",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "none",
-        "Satisfactory"
-    ],
-    "resion": [
-        "jayu",
-        "dsdfsf",
-        "fdsfdsfs",
-        "fsdfs",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "fdsf"
-    ]
-}
+[
+    {
+        "nome": "Quality Control Arrangements",
+        "Value": "Satisfactory",
+        "Reason": "12"
+    },
+    {
+        "nome": "Attention to Quality",
+        "Value": "Satisfactory",
+        "Reason": "32"
+    },
+    {
+        "nome": "Geometrics",
+        "Value": "Satisfactory",
+        "Reason": "55"
+    },
+    {
+        "nome": "Earthwork and Sub-grade in Embankment/Cutting",
+        "Value": "Unsatisfactory",
+        "Reason": "54"
+    },
+    {
+        "nome": "Granular Sub-base",
+        "Value": "Unsatisfactory",
+        "Reason": "kmk"
+    },
+    {
+        "nome": "Base Course Non-Bituminous and shoulders",
+        "Value": "Unsatisfactory",
+        "Reason": "mkm"
+    },
+    {
+        "nome": "Bituminous Surfacing",
+        "Value": "Satisfactory",
+        "Reason": "km"
+    },
+    {
+        "nome": "Shoulders",
+        "Value": "Unsatisfactory",
+        "Reason": "mkm"
+    },
+    {
+        "nome": "CD Works",
+        "Value": "Unsatisfactory",
+        "Reason": "k"
+    },
+    {
+        "nome": "Side Drains and Catch Water Drains",
+        "Value": "Reimprovement",
+        "Reason": "kkkm"
+    },
+    {
+        "nome": "CC/Semi-Rigid Pavement and Associated Pukka Drains",
+        "Value": "Satisfactory",
+        "Reason": "mkk"
+    },
+    {
+        "nome": "Road Furniture and Markings",
+        "Value": "Unsatisfactory",
+        "Reason": "dsffs"
+    }
+]

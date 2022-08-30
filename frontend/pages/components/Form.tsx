@@ -91,7 +91,16 @@ const Form = () => {
         });
 
         if (validetor) {
-            const data = { decision, resion };
+            const data = [];
+
+            for (let i = 0; i < 12; i++) {
+                data.push({
+                    nome: nomes[i],
+                    Value: decision[i],
+                    Reason: resion[i],
+                });
+            }
+
             console.log(data);
             alert(JSON.stringify(data));
         } else {
@@ -104,7 +113,7 @@ const Form = () => {
             <form onSubmit={handelSubmit}>
                 {/* ----- */}
                 {nomes.map((nome, index) => (
-                    <div key={index}>
+                    <div key={index.toString()}>
                         <div
                             className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
                             key={index}
