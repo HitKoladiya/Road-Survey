@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Form = (props: any) => {
     const nomes = [
@@ -92,7 +93,7 @@ const Form = (props: any) => {
         if (validetor) {
             const data = [];
 
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 12; i++) {
                 data.push({
                     nome: nomes[i],
                     Value: decision[i],
@@ -100,8 +101,25 @@ const Form = (props: any) => {
                 });
             }
 
-            console.log(data);
-            alert(JSON.stringify(data));
+            const finalData = { nqm: [...data] };
+
+            const options = {
+                method: "POST",
+                url: "http://127.0.0.1:5000/putdata_nqm",
+                data: finalData,
+            };
+
+            axios
+                .request(options)
+                .then(function (response: { data: any }) {
+                    console.log(response.data);
+                })
+                .catch(function (error: any) {
+                    console.error(error);
+                });
+
+            console.log(finalData);
+            alert(JSON.stringify(finalData));
         } else {
             alert("Please fill all fields");
         }

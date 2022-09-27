@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Form = (props: any) => {
     const nomes = [
@@ -109,8 +110,25 @@ const Form = (props: any) => {
                 });
             }
 
-            console.log(data);
-            alert(JSON.stringify(data));
+            const finalData = { sqm: [...data] };
+
+            const options = {
+                method: "POST",
+                url: "http://127.0.0.1:5000/putdata_sqm",
+                data: finalData,
+            };
+
+            axios
+                .request(options)
+                .then(function (response: { data: any }) {
+                    console.log(response.data);
+                })
+                .catch(function (error: any) {
+                    console.error(error);
+                });
+
+            console.log(finalData);
+            alert(JSON.stringify(finalData));
         } else {
             alert("Please fill all fields");
         }
