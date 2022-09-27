@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import CSS from "csstype";
 
-const Form = () => {
+const Form = (props: any) => {
     const nomes = [
         "Quality Control Arrangements",
         "Attention to Quality",
@@ -93,7 +92,7 @@ const Form = () => {
         if (validetor) {
             const data = [];
 
-            for (let i = 0; i < 12; i++) {
+            for (let i = 0; i < 15; i++) {
                 data.push({
                     nome: nomes[i],
                     Value: decision[i],
@@ -112,7 +111,7 @@ const Form = () => {
         <div className="w-2xl flex justify-center sm:py-10 sm:px-28 p-10">
             <form onSubmit={handelSubmit}>
                 {/* ----- */}
-                {nomes.map((nome, index) => (
+                {nomes.map((nome: any, index: any) => (
                     <div key={index.toString()}>
                         <div
                             className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
