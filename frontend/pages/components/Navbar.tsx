@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
-import logo from "../RS1name.png";
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
