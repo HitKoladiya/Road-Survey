@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Form from "./components/Form";
+import FormNqm from "./components/FormNqm";
 import Navbar from "./components/Navbar";
 
 const Details = () => {
@@ -10,8 +10,8 @@ const Details = () => {
                 <title>Fill Details</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar current="Details" />
-            <Form />
+            <Navbar current="DetailsNqm" />
+            <FormNqm />
         </>
     );
 };

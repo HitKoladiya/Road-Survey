@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import logo from "../RS1name.png";
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
@@ -11,9 +12,14 @@ const Navbar = (props: any) => {
     const navigation = [
         { name: "Dashboard", href: "/", current: props.current === "/" },
         {
-            name: "Enter Details",
-            href: "Details",
-            current: props.current === "Details",
+            name: "NQM",
+            href: "DetailsNqm",
+            current: props.current === "DetailsNqm",
+        },
+        {
+            name: "SQM",
+            href: "DetailsSqm",
+            current: props.current === "DetailsSqm",
         },
     ];
     return (
@@ -44,12 +50,12 @@ const Navbar = (props: any) => {
                                 <div className="flex-shrink-0 flex items-center">
                                     <img
                                         className="block lg:hidden h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                                        src="/RS1name.png"
                                         alt="Workflow"
                                     />
                                     <img
                                         className="hidden lg:block h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                                        src="/RS1name.png"
                                         alt="Workflow"
                                     />
                                 </div>
