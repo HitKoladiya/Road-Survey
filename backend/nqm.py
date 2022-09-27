@@ -1,11 +1,15 @@
 import pymongo
+from flask import jsonify
+
 client = pymongo.MongoClient("mongodb+srv://Hit:hi@cluster0.vpx7qvp.mongodb.net/test")
 db = client['myproject2']
 collection_nqm = db['nqm']
 
 
 def putdata_nqm(data):
+    print(data)
     collection_nqm.insert_one(data)
+    print("database")
 
 
 def pass_nqm(data):

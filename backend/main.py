@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
 from nqm import putdata_nqm, pass_nqm
 from sqm import putdata_sqm, pass_sqm
@@ -6,11 +6,7 @@ from sqm import putdata_sqm, pass_sqm
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/putdata_sqm/": {"origins": "*"}})
-CORS(app, resources={r"/putdata_nqm/": {"origins": "*"}})
-CORS(app, resources={r"/passnqm/": {"origins": "*"}})
-CORS(app, resources={r"/passsqm/": {"origins": "*"}})
-
+CORS(app)
 
 # keyring.set_password('python', 'StreamAlpha', 'Password')
 # keyring.get_password('python', 'StreamAlpha')
@@ -21,24 +17,25 @@ def hello_world():
 
 @app.route('/putdata_sqm', methods=['POST'])
 def getdatasqm():
-    content = request.get_json()
-    # print(content)
-    putdata_sqm(content)
-    return content
+    # content = request.get_json()
+    print("hii")
+    # putdata_sqm(content)
+    # return content
 
 
-@app.route('/putdata_nqm', methods=['POST'])
+@app.route('/putdata_nqm', methods=['POST','get'])
 def getdatanqm():
+    print("hello")
     content = request.get_json()
-    # print(content)
+    print(content)
     putdata_nqm(content)
-    return content
+    return {'submit':'succesfull'}
 
 
-@app.route('/passnqm', methods=['POST'])
+@app.route('/passnqm', methods=['POST','get'])
 def passnqm():
     content = request.get_json()
-    # print(content)
+    print(content)
     data = pass_nqm(content)
     # print(data)
     return data
