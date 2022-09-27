@@ -7,9 +7,9 @@ collection_nqm = db['nqm']
 
 
 def putdata_nqm(data):
-    print(data)
+    # print(data)
     collection_nqm.insert_one(data)
-    print("database")
+    # print("database")
 
 
 def pass_nqm(data):

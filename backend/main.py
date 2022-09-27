@@ -17,19 +17,19 @@ def hello_world():
 
 @app.route('/putdata_sqm', methods=['POST'])
 def getdatasqm():
-    # content = request.get_json()
-    print("hii")
-    # putdata_sqm(content)
-    # return content
+    content = request.get_json()
+    # print("hii")
+    putdata_sqm(content)
+    return {'submit':'successful'}
 
 
 @app.route('/putdata_nqm', methods=['POST','get'])
 def getdatanqm():
-    print("hello")
+    # print("hello")
     content = request.get_json()
-    print(content)
+    # print(content)
     putdata_nqm(content)
-    return {'submit':'succesfull'}
+    return {'submit':'successful'}
 
 
 @app.route('/passnqm', methods=['POST','get'])
