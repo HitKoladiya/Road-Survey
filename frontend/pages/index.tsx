@@ -10,6 +10,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar current="/" />
+            <img src="/hm.jpg" alt="logo" />
         </div>
     );
 };

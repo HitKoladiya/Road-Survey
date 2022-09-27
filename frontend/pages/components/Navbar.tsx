@@ -49,13 +49,13 @@ const Navbar = (props: any) => {
                             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="flex-shrink-0 flex items-center">
                                     <img
-                                        className="block lg:hidden h-8 w-auto"
-                                        src="/RS1name.png"
+                                        className="block lg:hidden h-11 w-auto"
+                                        src="/logo.png"
                                         alt="Workflow"
                                     />
                                     <img
-                                        className="hidden lg:block h-8 w-auto"
-                                        src="/RS1name.png"
+                                        className="hidden lg:block h-11 w-auto"
+                                        src="/logo.png"
                                         alt="Workflow"
                                     />
                                 </div>
