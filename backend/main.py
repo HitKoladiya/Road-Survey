@@ -46,6 +46,7 @@ def passsqm():
     content = request.get_json()
     # print(content)
     data = pass_sqm(content)
+    print(data)
     return data
 
 
