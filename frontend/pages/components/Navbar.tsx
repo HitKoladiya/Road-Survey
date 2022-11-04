@@ -9,7 +9,11 @@ function classNames(...classes: string[]) {
 
 const Navbar = (props: any) => {
     const navigation = [
-        { name: "Dashboard", href: "/", current: props.current === "/" },
+        {
+            name: "Dashboard",
+            href: "roads",
+            current: props.current === "roads",
+        },
         {
             name: "NQM",
             href: "DetailsNqm",
