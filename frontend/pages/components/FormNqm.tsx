@@ -20,6 +20,12 @@ const Form = (props: any) => {
     const tailwindClass =
         "mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-idiborder-indigo-600 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500";
 
+    const [form, setForm] = useState({
+        name: "",
+        location: "",
+        pin: "",
+    });
+
     const [decision, setDecision] = useState([
         "none",
         "none",
@@ -77,6 +83,12 @@ const Form = (props: any) => {
         setResion(newResion);
     };
 
+    const handleChange = (e: { target: { name: string; value: string } }) => {
+        name = e.target.name;
+        value = e.target.value;
+        setForm({ ...form, [name]: value });
+    };
+
     const handelSubmit = (e: any) => {
         e.preventDefault();
 
@@ -90,6 +102,10 @@ const Form = (props: any) => {
             element === "" ? (validetor = false) : (validetor = true);
         });
 
+        if (!form.location || !form.name || form.pin.length !== 6) {
+            validetor = false;
+        }
+
         if (validetor) {
             const data = [];
 
@@ -101,7 +117,7 @@ const Form = (props: any) => {
                 });
             }
 
-            const finalData = { nqm: [...data] };
+            const finalData = { nqm: [...data], ...form };
 
             const options = {
                 method: "POST",
@@ -121,13 +137,72 @@ const Form = (props: any) => {
             console.log(finalData);
             alert(JSON.stringify(finalData));
         } else {
-            alert("Please fill all fields");
+            alert("Please fill all fields properly");
         }
     };
 
     return (
         <div className="w-2xl flex justify-center sm:py-10 sm:px-28 p-10">
             <form onSubmit={handelSubmit}>
+                <div
+                    className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
+
+                >
+                    <div className="flex items-center h-10 col-span-2">
+                        <label className="text-sm font-medium text-slate-700">
+                            Road name
+                        </label>
+                    </div>
+                    <input
+                        type="text"
+                        name="name"
+                        className={`${tailwindClass} h-10 col-span-2`}
+                        onChange={handleChange}
+                    >
+
+                    </input>
+
+                </div>
+
+                <div
+                    className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
+
+                >
+                    <div className="flex items-center h-10 col-span-2">
+                        <label className="text-sm font-medium text-slate-700">
+                            Road Location
+                        </label>
+                    </div>
+                    <input
+                        type="text"
+                        name="location"
+                        className={`${tailwindClass} h-10 col-span-2`}
+                        onChange={handleChange}
+                    >
+
+                    </input>
+
+                </div>
+                <div
+                    className="sm:grid sm:grid-cols-5 sm:gap-5 justify-center py-3 flex flex-col items-center"
+
+                >
+                    <div className="flex items-center h-10 col-span-2">
+                        <label className="text-sm font-medium text-slate-700">
+                            Location Pincode
+                        </label>
+                    </div>
+                    <input
+                        type="number`"
+                        name="pin"
+                        className={`${tailwindClass} h-10 col-span-2`}
+                        onChange={handleChange}
+                    >
+
+                    </input>
+
+                </div>
+                <hr />
                 {/* ----- */}
                 {nomes.map((nome: any, index: any) => (
                     <div key={index.toString()}>
