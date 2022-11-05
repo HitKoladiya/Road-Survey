@@ -11,17 +11,17 @@ const Navbar = (props: any) => {
     const navigation = [
         {
             name: "Dashboard",
-            href: "roads",
+            href: "/roads",
             current: props.current === "roads",
         },
         {
             name: "NQM",
-            href: "DetailsNqm",
+            href: "/DetailsNqm",
             current: props.current === "DetailsNqm",
         },
         {
             name: "SQM",
-            href: "DetailsSqm",
+            href: "/DetailsSqm",
             current: props.current === "DetailsSqm",
         },
     ];
